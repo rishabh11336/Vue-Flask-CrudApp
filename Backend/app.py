@@ -70,6 +70,25 @@ def add_article():
     articles = Article.query.filter_by(title=title, body=body).first()
     return jsonify({'id':articles.id, 'title':articles.title, 'body':articles.body, 'date':articles.date})
 
+@app.route('/update/<int:id>', methods = ['PUT'])
+def update_article(id):
+    article = Article.query.filter_by(id=id).first()
+    data = request.get_json()
+    title = data.get('title')
+    body = data.get('body')
+    article.title = title
+    article.body = body
+    db.session.commit()
+    articles = Article.query.filter_by(id=id).first()
+    return jsonify({'id':articles.id, 'title':articles.title, 'body':articles.body, 'date':articles.date})
+
+@app.route('/delete/<int:id>', methods = ['DELETE'])
+def delete_article(id):
+    article = Article.query.filter_by(id=id).first()
+    db.session.delete(article)
+    db.session.commit()
+
+    return jsonify({'id':article.id, 'title':article.title, 'body':article.body, 'date':article.date})
 
 if __name__ == "__main__":
     app.run(debug=True)
