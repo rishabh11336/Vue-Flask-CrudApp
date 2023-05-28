@@ -2,7 +2,6 @@
 
 ## CRUD APP
 ### Using 
-<li>
-<ul>Flask Api</ul> 
-<ul>Vue frontend</ul>
-</li>
+
+- Flask Api
+- Vue for Frontend
