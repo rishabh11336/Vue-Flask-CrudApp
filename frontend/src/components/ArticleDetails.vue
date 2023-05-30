@@ -1,6 +1,10 @@
 <template>
     <div class="container mt-5">
         <h2>{{article.title}}</h2>
+        <p class="mt-3">
+            {{article.body}}
+        </p>
+        <h6>Published Date: {{article.date}}</h6>
     </div>
 </template>
 
