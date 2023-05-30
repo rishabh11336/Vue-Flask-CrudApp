@@ -4,7 +4,7 @@
       <input type="text" class="form-control" placeholder="Please Enter your Title" v-model="title" /><br>
       <textarea rows="10" class="form-control" placeholder="Please enter your body" v-model="body"></textarea>
       <button class="btn btn-success mt-4">
-        Prublish Article
+        Publish Article
       </button>
     </form>
     <div v-if="error" class="alert alert-warning alert-dismissible fade show mt-5" role="alert">

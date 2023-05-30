@@ -5,6 +5,9 @@
             {{article.body}}
         </p>
         <h6>Published Date: {{article.date}}</h6>
+        <router-link :to="{name:'articleedit', params:{id:article.id}}" class="btn btn-success mt-3">
+            UPDATE
+        </router-link>
         <button class="btn btn-danger mx-3 mt-3" @click="deleteArticle">
             Delete
         </button>

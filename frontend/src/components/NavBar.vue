@@ -10,7 +10,7 @@
         <li class="nav-item">
           <router-link class="btn btn-primary" aria-current="page" to="/">Home</router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mx-2">
           <router-link class="btn btn-success" to="/create">Create</router-link>
         </li>
       </ul>
