@@ -1,9 +1,10 @@
 <template>
   <div class="container mt-5">
     <div v-for="article in articles" :key="article.id">
-      <h3>{{article.title}}</h3>
-      <p>{{article.body}}</p>
-      <p>{{article.date}}</p>
+      <h3>
+        <router-link :to="{name:'details', params:{id:article.id}}">{{article.title}}</router-link>
+      </h3>
+      
     </div>
   </div>
 </template>
