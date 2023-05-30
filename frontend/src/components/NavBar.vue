@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <router-link class="navbar-brand" to="/">Flask and Vue</router-link>
+    <router-link class="navbar-brand text-style" to="/">Flask and Vue</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,5 +26,9 @@ export default {
 </script>
 
 <style>
-
+.text-style {
+  font-size: 30px !important;
+  font-family: fantasy !important;
+  color: brown !important;
+}
 </style>
