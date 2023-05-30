@@ -5,6 +5,9 @@
             {{article.body}}
         </p>
         <h6>Published Date: {{article.date}}</h6>
+        <button class="btn btn-danger mx-3 mt-3" @click="deleteArticle">
+            Delete
+        </button>
     </div>
 </template>
 
@@ -23,6 +26,24 @@ export default {
     },
 
     methods: {
+        deleteArticle() {
+            fetch(`http://127.0.0.1:5000/delete/${this.id}`, {
+            method:"DELETE",
+            headers: {
+            "Content-Type":"application/json"
+            } 
+        })
+        .then(() => {
+            this.$router.push({
+                name:'home'
+            })
+            })
+        .catch(error => {
+            console.log(error)
+        })
+        },
+
+
         getArticleData() {
             fetch(`http://127.0.0.1:5000/get/${this.id}`, {
             method:"GET",
